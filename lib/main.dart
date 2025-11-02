@@ -165,33 +165,48 @@ class InfoScreen extends StatelessWidget {
         // Habilita el botón de retroceso automático
       ),
       
- body: Center(
+ // main.dart (Fragmento del body de InfoScreen)
+
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'Contador',
-              style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Colors.indigo),
+            Column(
+              children: <Widget>[
+                const CircleAvatar(
+                  radius: 40, 
+                  backgroundColor: Colors.indigo, 
+                  child: Text(
+                    'LG', 
+                    style: TextStyle(fontSize: 24, color: Colors.white), 
+                  ),
+                ),
+
+                const SizedBox(height: 10),
+                const Text(
+                  'Contador',
+                  style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Colors.indigo),
+                ),
+              ],
             ),
             const SizedBox(height: 20),
-
-            // Información del desarrollador (usa tus datos)
+            
+            // Información del desarrollador (usando tus datos)
             const Text(
               'Desarrollado por: Laury Guerrero (Pastelblue05)', 
               style: TextStyle(fontSize: 18),
             ),
             const SizedBox(height: 10),
-            
+
             const Text(
-              'App info: Contador de numero decimales, se puede sumar, restar, multiplicar, dividir y resetear', 
+              'App Info: Contador de número decimales, se puede sumar, restar, multiplicar, dividir y resetear', 
               style: TextStyle(fontSize: 16),
             ),
-            
+
             const Text(
               'Fecha de creación: 01/11/2025', 
               style: TextStyle(fontSize: 16),
-            ),
-            
+            ),            
             const SizedBox(height: 40),
           ],
         ),
