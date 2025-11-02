@@ -68,15 +68,16 @@ class _ContadorPageState extends State<ContadorPage> {
         
         children: <Widget>[
           // Texto del contador 
-          Center(
-            child: Text(
-              _contador.toStringAsFixed(2),
-              style: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
+          Expanded(
+            child: Center(
+              child: Text(
+                _contador.toStringAsFixed(2), 
+                style: const TextStyle(fontSize: 60, fontWeight: FontWeight.bold),
+              ),
             ),
           ),
-          const SizedBox(height: 20),
-          
-          // Botones de la pagina principal
+
+           // Botones de la pagina principal
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly, 
             children: <Widget>[
@@ -85,6 +86,7 @@ class _ContadorPageState extends State<ContadorPage> {
               FloatingActionButton(
                 onPressed: () => _actualizar(-1.0),
                 heroTag: "btn_restar",
+                backgroundColor: Colors.indigo, 
                 child: const Icon(Icons.remove),
               ),
 
@@ -92,6 +94,7 @@ class _ContadorPageState extends State<ContadorPage> {
               FloatingActionButton(
                 onPressed: () => _actualizar(1.0),
                 heroTag: "btn_sumar",
+                backgroundColor: Colors.indigo,
                 child: const Icon(Icons.add),
               ),
               
@@ -99,6 +102,7 @@ class _ContadorPageState extends State<ContadorPage> {
               FloatingActionButton(
                 onPressed: _multiplicar,
                 heroTag: "btn_multiplicar",
+                backgroundColor: Colors.indigo, 
                 child: const Icon(Icons.close),
               ),
 
@@ -106,15 +110,17 @@ class _ContadorPageState extends State<ContadorPage> {
               FloatingActionButton(
                 onPressed: _dividir,
                 heroTag: "btn_dividir",
+                backgroundColor: Colors.indigo, 
                 child: const Icon(Icons.data_usage),
               ),
               
-              // Botón de Resetear
+              // Botón de Resetear 
               FloatingActionButton(
                 onPressed: _resetear,
                 heroTag: "btn_reset",
+                backgroundColor: Colors.indigo, 
                 child: const Icon(Icons.refresh),
-                
+
               ),
             ],
           ),
